@@ -1,0 +1,17 @@
+CR Firework is a painting hang for people who want to spot the one work that does not belong. You save Yale University Art Gallery paintings on this device, hang four unlabeled tiles (three by one maker, one stray), and tap the stray.
+
+• Pluck the stray: tap the unlabeled painting that does not belong.
+• Hang four paintings: three share a maker, one does not; tiles stay unlabeled.
+• Miss: greys that tile, records a miss, hang stays.
+• Isolated paintings: a correct pick files that work here and takes it out of the next hang.
+• Retract last pick: peels the last correct pick or the last miss.
+• Explore: search the Yale collection and save a painting to your hang.
+• Local Yale shelf when search is empty or Yale cannot be reached.
+• Saved: isolated paintings and misses, with Correct picks and Misses counts.
+• Yale credit and Retract, including Contact and the two Yale source rows.
+• Re-run onboarding.
+• Reset all data (confirmed).
+• Pluck one stray: one stray per hang, with Strays plucked and Paintings waiting.
+• Shortcuts: Open Quiz, Open Explore, Open Saved, Open Settings, Hang a school, Pluck the stray.
+
+Home is the hang. Paintings, picks, and misses stay on this device. Light appearance only. Portrait only on iPhone and iPad.

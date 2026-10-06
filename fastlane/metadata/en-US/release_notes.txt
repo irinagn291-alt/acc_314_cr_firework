@@ -1,0 +1,18 @@
+Version 1.0. Initial release of CR Firework.
+
+Save Yale University Art Gallery paintings on this device, hang four unlabeled tiles (three by one maker, one stray), and tap the stray.
+
+• Pluck the stray on the hang
+• Hang four paintings
+• Miss greys that tile and the hang stays
+• Isolated paintings for a correct pick
+• Retract last pick
+• Explore and the local Yale shelf
+• Saved: isolated paintings and misses
+• Yale credit and Retract, including Contact and the two Yale source rows
+• Re-run onboarding
+• Reset all data
+• Pluck one stray
+• Shortcuts: Open Quiz, Open Explore, Open Saved, Open Settings, Hang a school, Pluck the stray
+
+Light appearance only. Portrait only. iPhone and iPad. Minimum iOS 17.0.
