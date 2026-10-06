@@ -1,4 +1,4 @@
-<!-- gf-brief source=f342e06ab38ff55c0b7ee4567b5687aa7c9159768d7179249ef1fdfda004ea26 written=2026-10-06T19:44:24+03:00 -->
+<!-- gf-brief source=53d90e1507b2d647362dd913a3d2a70ab67f3d14dda36ac311a4bbb74a4c2007 written=2026-10-06T20:37:05+03:00 -->
 # CR Firework
 ## What it is
 CR Firework is a painting hang for people who want to spot the one work that does not belong. You save Yale University Art Gallery paintings on this device, hang four unlabeled tiles (three by one maker, one stray), and tap the stray. A true tap files that painting as isolated; a miss greys that tile and the hang stays.

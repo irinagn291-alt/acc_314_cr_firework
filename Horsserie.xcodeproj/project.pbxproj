@@ -51,6 +51,7 @@
 		CCC1B66F285C14B668314AD0 /* HorsserieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387FA34876FD96A92E54DFC /* HorsserieApp.swift */; };
 		CE2C380AA176DE763DB26D9A /* HangIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38BAB20D1893A5FFA42DC7 /* HangIntents.swift */; };
 		DB3F136B91EF459EB6462477 /* HangFoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB7F68C1C76EB56F236F48 /* HangFoldTests.swift */; };
+		E739C592FC116B88A3A8D20C /* AppsFlyerLib-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 94E4C87DD852B4BCD5D3E184 /* AppsFlyerLib-Static */; };
 		E7734D68CDEEC6E8B2910CA0 /* CatalogTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4845B85019070CD609BDAA1 /* CatalogTransport.swift */; };
 		EE8FE5B51FE56551167E738B /* HangType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324B195F19B269BDB7157AA /* HangType.swift */; };
 		EF635E2201A862EED968FDA4 /* ReviewDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E5DBF4522AF8476E722EC /* ReviewDestination.swift */; };
@@ -128,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEEB6764B7EC725A50B6F89 /* Alamofire in Frameworks */,
+				E739C592FC116B88A3A8D20C /* AppsFlyerLib-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +283,7 @@
 			name = Horsserie;
 			packageProductDependencies = (
 				B38C1D0083D170A709580F5C /* Alamofire */,
+				94E4C87DD852B4BCD5D3E184 /* AppsFlyerLib-Static */,
 			);
 			productName = Horsserie;
 			productReference = 543BD0A5022C3B91111D8875 /* Horsserie.app */;
@@ -331,7 +334,8 @@
 			mainGroup = 77C98A4AA90EB95F95476F88;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				E5A879D019E942A59708C529 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5143E2A6FA862A02F506149A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7615FACE38C4C95553DCE523 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A144B4B09DD2CF62953B8C60 /* Products */;
@@ -438,7 +442,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Horsserie/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Horsserie;
+				INFOPLIST_KEY_CFBundleDisplayName = "CR Firework";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app does not use the camera.";
@@ -637,7 +641,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Horsserie/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Horsserie;
+				INFOPLIST_KEY_CFBundleDisplayName = "CR Firework";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app does not use the camera.";
@@ -694,7 +698,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E5A879D019E942A59708C529 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		5143E2A6FA862A02F506149A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ymvmj7dsyy-stack/Alamofire";
 			requirement = {
@@ -702,12 +706,25 @@
 				revision = 3ea8e93ec37a3ae5f255afb529ef20f438dd1903;
 			};
 		};
+		7615FACE38C4C95553DCE523 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.17.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		94E4C87DD852B4BCD5D3E184 /* AppsFlyerLib-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7615FACE38C4C95553DCE523 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */;
+			productName = "AppsFlyerLib-Static";
+		};
 		B38C1D0083D170A709580F5C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E5A879D019E942A59708C529 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 5143E2A6FA862A02F506149A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

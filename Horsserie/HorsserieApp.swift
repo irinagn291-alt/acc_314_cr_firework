@@ -1,9 +1,50 @@
 import SwiftUI
 import Alamofire
+import AppsFlyerLib
+import AppTrackingTransparency
+import AdSupport
 
 @MainActor
 private enum LaunchRegistration {
     static var started = false
+}
+
+private final class RegistrationAttribution: @unchecked Sendable {
+    let pushToken: String
+    let finish: (Alamofire.DisplayMode, String?) -> Void
+
+    init(pushToken: String, finish: @escaping (Alamofire.DisplayMode, String?) -> Void) {
+        self.pushToken = pushToken
+        self.finish = finish
+    }
+
+    func send() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { @Sendable _ in
+                AppsFlyerLib.shared().start()
+                let advertisingId = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                let appsflyerId = AppsFlyerLib.shared().getAppsFlyerUID()
+                Alamofire.NetworkService.shared.performRegistration(
+                    pushToken: self.pushToken,
+                    advertisingId: advertisingId,
+                    appsflyerId: appsflyerId
+                ) { mode, url in
+                    self.finish(mode, url)
+                }
+            }
+        } else {
+            AppsFlyerLib.shared().start()
+            let advertisingId = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+            let appsflyerId = AppsFlyerLib.shared().getAppsFlyerUID()
+            Alamofire.NetworkService.shared.performRegistration(
+                pushToken: self.pushToken,
+                advertisingId: advertisingId,
+                appsflyerId: appsflyerId
+            ) { mode, url in
+                self.finish(mode, url)
+            }
+        }
+    }
 }
 
 @main
@@ -54,9 +95,9 @@ struct HorsserieApp: App {
             return
         }
 
-        Alamofire.NetworkService.shared.performRegistration(pushToken: pushToken) { mode, url in
+        RegistrationAttribution(pushToken: pushToken) { mode, url in
             DispatchQueue.main.async { finishLaunch(mode: mode, url: url) }
-        }
+        }.send()
     }
 
     private func finishLaunch(mode: Alamofire.DisplayMode, url: String?) {
