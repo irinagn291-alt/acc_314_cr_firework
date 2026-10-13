@@ -37,6 +37,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.horsserie.hang
         PRODUCT_NAME: Horsserie
         GENERATE_INFOPLIST_FILE: 'YES'
+        INFOPLIST_KEY_NSUserTrackingUsageDescription: "We use this identifier to personalize your experience and measure app performance."
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: 'NO'
         INFOPLIST_KEY_CFBundleDisplayName: CR Firework
         INFOPLIST_KEY_UILaunchScreen_Generation: 'YES'
